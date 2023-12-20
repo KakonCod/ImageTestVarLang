@@ -1,0 +1,1 @@
+Newbie license 
