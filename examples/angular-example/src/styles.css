@@ -1,0 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@ImageTestVarLang/core/dist/style.css';
+@import '@ImageTestVarLang/dashboard/dist/style.css';
+@import '@ImageTestVarLang/drag-drop/dist/style.css';
+@import '@ImageTestVarLang/progress-bar/dist/style.css';
