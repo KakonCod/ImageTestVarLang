@@ -1,0 +1,19 @@
+{
+  "name": "@ImageTestVarLang-example/aws-php",
+  "version": "0.0.0",
+  "dependencies": {
+    "@ImageTestVarLang/aws-s3": "workspace:*",
+    "@ImageTestVarLang/core": "workspace:*",
+    "@ImageTestVarLang/dashboard": "workspace:*",
+    "ImageTestVarLang": "workspace:*"
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.1"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "php -S localhost:8080 serve.php",
+    "outputBundle": "esbuild --format=esm --sourcemap=inline --bundle ./main.js"
+  }
+}
