@@ -1,0 +1,22 @@
+{
+  "name": "@ImageTestVarLang-example/bundled",
+  "version": "0.0.0",
+  "dependencies": {
+    "@ImageTestVarLang/core": "workspace:*",
+    "@ImageTestVarLang/dashboard": "workspace:*",
+    "@ImageTestVarLang/google-drive": "workspace:*",
+    "@ImageTestVarLang/instagram": "workspace:*",
+    "@ImageTestVarLang/tus": "workspace:*",
+    "@ImageTestVarLang/url": "workspace:*",
+    "@ImageTestVarLang/webcam": "workspace:*"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html"
+  }
+}
