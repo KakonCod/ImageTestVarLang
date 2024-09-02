@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://releases.transloadit.com/ImageTestVarLang/v3.20.0/ImageTestVarLang.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <noscript>You need JavaScript enabled for this example to work.</noscript>
+    <button id="ImageTestVarLangModalOpener">Open Modal</button>
+
+    <script type="module">
+      import {
+        ImageTestVarLang,
+        Dashboard,
+        Webcam,
+        Tus,
+      } from 'https://releases.transloadit.com/ImageTestVarLang/v3.20.0/ImageTestVarLang.min.mjs'
+
+      const ImageTestVarLang = new ImageTestVarLang({ debug: true, autoProceed: false })
+        .use(Dashboard, { trigger: '#ImageTestVarLangModalOpener' })
+        .use(Webcam, { target: Dashboard })
+        .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
+
+      ImageTestVarLang.on('success', (fileCount) => {
+        console.log(`${fileCount} files uploaded`)
+      })
+    </script>
+
+    <!-- To support older browsers, you can use the legacy bundle which adds a global `ImageTestVarLang` object.  -->
+    <script
+      nomodule
+      src="https://releases.transloadit.com/ImageTestVarLang/v3.20.0/ImageTestVarLang.legacy.min.js"
+    ></script>
+    <script nomodule>
+      {
+        const { Dashboard, Webcam, Tus } = ImageTestVarLang
+        const ImageTestVarLang = new ImageTestVarLang.ImageTestVarLang({ debug: true, autoProceed: false })
+          .use(Dashboard, { trigger: '#ImageTestVarLangModalOpener' })
+          .use(Webcam, { target: Dashboard })
+          .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
+
+        ImageTestVarLang.on('success', function (fileCount) {
+          console.log(`${fileCount} files uploaded`)
+        })
+      }
+    </script>
+  </body>
+</html>
