@@ -1,0 +1,27 @@
+{
+  "name": "@ImageTestVarLang-example/react",
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@ImageTestVarLang/core": "workspace:*",
+    "@ImageTestVarLang/dashboard": "workspace:*",
+    "@ImageTestVarLang/drag-drop": "workspace:*",
+    "@ImageTestVarLang/file-input": "workspace:*",
+    "@ImageTestVarLang/google-drive": "workspace:*",
+    "@ImageTestVarLang/progress-bar": "workspace:*",
+    "@ImageTestVarLang/react": "workspace:*",
+    "@ImageTestVarLang/tus": "workspace:*",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^2.0.0",
+    "vite": "^4.0.0"
+  }
+}
